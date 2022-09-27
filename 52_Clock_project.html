@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contianer{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        span{
+font-size: 140px;
+font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <span id="hour">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+        <span>/</span>
+       
+    </div>
+    <script>
+        function display(){
+     let newdate = new Date();
+     let hour= document.getElementById('hour').innerHTML = newdate.getHours();
+     let min = document.getElementById('min').innerHTML = newdate.getMinutes();
+
+     let sec = document.getElementById('sec').innerHTML = newdate.getSeconds();
+    // 
+    
+        }
+        setInterval(display ,500)
+    </script>
+</body>
+</html>
